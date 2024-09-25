@@ -11,7 +11,7 @@ df=load_data()
 # show the title
 st.header("Titanic App by Zehao Chen ")
 # read csv and show the dataframe
-df.head(10)
+st.df.head(10)
 
 # create a figure with three subplots, size should be (15, 5)
 # show the box plot for ticket price with different classes
@@ -27,3 +27,4 @@ for i, cls in enumerate(df['Pclass'].unique(), start=-1):
 
 plt.tight_layout()
 plt.show()
+st.pyplot(fig)
