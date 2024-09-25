@@ -1,11 +1,15 @@
 # import packages
+import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
-df = pd.read_csv('train.csv')
+@st.cache
+def load_data():
+    data = pd.read_csv('train.csv')
+    return data
+df=load_data()
 # show the title
-print("Titanic app by Zehao Chen")
-
+st.header("Titanic App by Zehao Chen ")
 # read csv and show the dataframe
 df.head(10)
 
