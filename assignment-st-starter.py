@@ -24,7 +24,5 @@ for i, cls in enumerate(df['Pclass'].unique(), start=-1):
     sns.boxplot(y=df[df['Pclass'] == cls]['Fare'], ax=ax[i])
     ax[i].set_xlabel(f'PClass = {cls}')
     ax[i].set_ylabel('Fare')
-
 plt.tight_layout()
-plt.show()
 st.pyplot(fig)
